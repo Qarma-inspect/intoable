@@ -41,7 +41,7 @@ jobs:
           otp-version: ${{ matrix.otp }}
 
       - name: Cache deps and build
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: |
             deps
@@ -71,7 +71,7 @@ jobs:
           otp-version: "28"
 
       - name: Cache deps and build
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: |
             deps
@@ -81,7 +81,7 @@ jobs:
             ${{ runner.os }}-mix-quality-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-
 
       - name: Cache PLT
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: priv/plts
           key: ${{ runner.os }}-plts-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-${{ hashFiles('**/mix.lock') }}
