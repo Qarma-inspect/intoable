@@ -39,7 +39,7 @@ defmodule Intoable.MixProject do
       main: "Intoable",
       source_url: @source_url,
       source_ref: "v#{@version}",
-      extras: ["README.md", "CHANGELOG.md"]
+      extras: ["README.md", "CHANGELOG.md", "LICENSE"]
     ]
   end
 

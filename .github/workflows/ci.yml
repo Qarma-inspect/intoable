@@ -92,4 +92,13 @@ jobs:
       - run: mix format --check-formatted
       - run: mix credo --strict
       - run: mix dialyzer --format github
-      - run: mix docs
+
+      # Docs must be generated in :dev — under :test the test/support fixtures
+      # are compiled and ex_doc warns about hidden-module references from the
+      # generated protocols.
+      - name: Build docs (dev env)
+        env:
+          MIX_ENV: dev
+        run: |
+          mix deps.get
+          mix docs
