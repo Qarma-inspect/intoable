@@ -1,0 +1,51 @@
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where third-party dependencies like ExDoc output generated docs.
+/doc/
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+intoable-*.tar
+
+# Temporary files, for example, from tests.
+/tmp/
+
+# Editor / IDE / language-server state.
+.elixir_ls
+.expert
+.vscode
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# Local AI agent config and state. Public rules/instructions live in committed
+# files like AGENT.md, CLAUDE.md, .github/copilot-instructions.md — keep those.
+.claude
+.aider*
+.continue/
+.gemini/
+.codex/
+
+# macOS Finder metadata.
+.DS_Store
+
+# Local toolchain pinning (mise). CI declares its own versions explicitly.
+.mise.toml
+
+# Dialyzer PLT artifacts (regenerated locally and in CI cache).
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
